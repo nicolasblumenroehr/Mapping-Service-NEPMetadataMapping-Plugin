@@ -48,7 +48,7 @@ public class NEPMetadataMapping implements IMappingPlugin{
     public void setup() {
         LOGGER.info("Checking and installing dependencies for NEPMetadataMapping: ");
         try {
-            PythonRunnerUtil.runPythonScript("-m", "pip", "install", "pydicom", "jsonschema", "logging", "zipfile", "typing", "datetime");
+            PythonRunnerUtil.runPythonScript("-m", "pip", "install", "pydicom", "jsonschema", "logging", "zipp", "typing", "datetime");
             dir = FileUtil.cloneGitRepository(REPOSITORY, BRANCH);
         } catch (Exception e) {
            e.printStackTrace();
